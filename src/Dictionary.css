@@ -1,0 +1,19 @@
+.Dictionary section {
+  background: #eeeeee;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+  margin: 20px 0;
+  padding: 30px;
+}
+
+.Dictionary h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.Dictionary h3 {
+  padding-left: 10px;
+  font-size: 22px;
+}

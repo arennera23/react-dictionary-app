@@ -1,11 +1,20 @@
 .Results {
-  text-align: left;
+  margin-left: 20px;
 }
 
 .Results h2 {
-  font-size: 50px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .Results em {
   font-size: 24px;
+}
+
+.Results section {
+  background: #eeeeee;
+}
+
+.Results hr {
+  margin: 40px 0;
 }

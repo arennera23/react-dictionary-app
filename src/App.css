@@ -1,8 +1,13 @@
+body {
+  background-color: #303841;
+  color: #3a4750;
+}
+
 .App {
-  text-align: center;
   margin: 100px auto;
-  max-width: 740px;
-  padding: 20px;
-  border: 1px solid;
-  border-radius: 4px;
+  max-width: 640px;
+}
+
+.App footer {
+  color: #ea9215;
 }
