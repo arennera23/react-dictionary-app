@@ -1,7 +1,8 @@
-import "./Dictionary.css";
 import { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
+import "./Dictionary.css";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -9,9 +10,6 @@ export default function Dictionary(props) {
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
-  function handleInput(event) {
-    setKeyword(event.target.value);
-  }
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
   }
@@ -26,16 +24,19 @@ export default function Dictionary(props) {
     axios.get(apiUrl).then(handleDictionaryResponse);
   }
 
-  let pexelsApiKey = "563492ad6f91700001000001e5d9d7644b8d41d9af96dd0772b23bc8";
+  let pexelsApiKey = `563492ad6f91700001000001e5d9d7644b8d41d9af96dd0772b23bc8`;
   let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
-  let header = `Authorization: Bearer ${pexelsApiKey}`;
-  axios.get(pexelsApiUrl, { headers: { header } }).then(handlePexelsResponse);
+  axios
+    .get(pexelsApiUrl, { headers: { Authorization: `${pexelsApiKey}` } })
+    .then(handlePexelsResponse);
 
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
-
+  function handleInput(event) {
+    setKeyword(event.target.value);
+  }
   function load() {
     setLoaded(true);
     search();
@@ -51,11 +52,14 @@ export default function Dictionary(props) {
             <input
               type="search"
               className="form-control"
-              defaultValue={props.defaultKeyword}
               onChange={handleInput}
+              defaultValue={props.defaultKeyword}
             />
           </form>{" "}
           <Results results={results} />
+        </section>
+        <section>
+          <Photos photos={photos} />
         </section>
       </div>
     );

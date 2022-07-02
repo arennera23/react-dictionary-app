@@ -7,7 +7,15 @@ export default function App() {
       <div className="container">
         <Dictionary defaultKeyword="wolf" />
       </div>
-      <footer className="text-center">Coded by Aren Langeg</footer>
+      <footer className="text-center">
+        Coded by Aren Langeg and open-sourced code on{" "}
+        <a
+          href="https://github.com/arennera23/react-dictionary-app"
+          target="_blank"
+        >
+          Github
+        </a>
+      </footer>
     </div>
   );
 }
