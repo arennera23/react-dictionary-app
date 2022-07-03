@@ -12,6 +12,11 @@ export default function Dictionary(props) {
 
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
+    let pexelsApiKey = `563492ad6f91700001000001e5d9d7644b8d41d9af96dd0772b23bc8`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    axios
+      .get(pexelsApiUrl, { headers: { Authorization: `${pexelsApiKey}` } })
+      .then(handlePexelsResponse);
   }
 
   function handlePexelsResponse(response) {
@@ -22,11 +27,6 @@ export default function Dictionary(props) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
   }
-  let pexelsApiKey = `563492ad6f91700001000001e5d9d7644b8d41d9af96dd0772b23bc8`;
-  let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
-  axios
-    .get(pexelsApiUrl, { headers: { Authorization: `${pexelsApiKey}` } })
-    .then(handlePexelsResponse);
 
   function handleSubmit(event) {
     event.preventDefault();
