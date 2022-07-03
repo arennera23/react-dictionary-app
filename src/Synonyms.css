@@ -1,6 +1,7 @@
 .Synonyms ul {
   padding: 0;
   margin: 15px 0;
+  border: 1px solid black;
 }
 
 .Synonyms li {

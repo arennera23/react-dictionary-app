@@ -25,7 +25,7 @@ export default function Dictionary(props) {
   let pexelsApiKey = `563492ad6f91700001000001e5d9d7644b8d41d9af96dd0772b23bc8`;
   let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
   axios
-    .get(pexelsApiUrl, { headers: { Authorization: pexelsApiKey } })
+    .get(pexelsApiUrl, { headers: { Authorization: `${pexelsApiKey}` } })
     .then(handlePexelsResponse);
 
   function handleSubmit(event) {

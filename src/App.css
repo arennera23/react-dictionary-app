@@ -1,11 +1,8 @@
 body {
-  background-color: #3a4750;
-  color: #3a4750;
-}
-
-.App {
-  margin: 100px auto;
-  max-width: 640px;
+  background: url("images/pexels-eberhard-grossgasteiger-2098428.jpg") no-repeat
+    center fixed;
+  color: black;
+  background-size: cover;
 }
 
 .App footer {
