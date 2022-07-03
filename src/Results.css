@@ -1,16 +1,15 @@
-.Results {
-  margin-left: 20px;
-}
-
 .Results h2 {
-  font-size: 20px;
+  color: #ffff;
+  font-size: 24px;
   font-weight: bold;
+  margin-left: 12px;
 }
 
 .Results em {
+  color: #ffff;
   font-size: 8px;
 }
 
 .Results hr {
-  margin: 40px 0;
+  margin: 24px 0;
 }

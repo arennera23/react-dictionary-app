@@ -1,8 +1,5 @@
 body {
-  background: url("images/pexels-eberhard-grossgasteiger-2098428.jpg") no-repeat
-    center fixed;
-  color: black;
-  background-size: cover;
+  background: #dcd7c9;
 }
 
 .App footer {

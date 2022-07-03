@@ -15,6 +15,8 @@ export default function App() {
           >
             Github
           </a>
+          <br />
+          Images are from Pexels. Photo by eberhard grossgasteiger.
         </footer>{" "}
       </div>
     </div>

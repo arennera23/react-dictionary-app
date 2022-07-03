@@ -1,8 +1,9 @@
-.Meaning h3 {
+.Meaning h4 {
   font-size: 16px;
   line-height: 1.5;
   font-weight: bold;
   font-style: italic;
+  color: black;
 }
 
 .Meaning .definition {
@@ -14,4 +15,9 @@
   font-style: italic;
   opacity: 0.7;
   margin: 5px 0 24px;
+}
+
+.Meaning section {
+  background: rgba(238, 238, 238, 0.7);
+  border-radius: 4px;
 }
